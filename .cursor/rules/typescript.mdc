@@ -1,0 +1,34 @@
+---
+description: TypeScript conventions
+globs: "**/*.ts"
+alwaysApply: false
+---
+
+# TypeScript
+
+## Formatting (ESLint)
+
+- No trailing comma: `commaDangle: 'never'`
+- Brace style: `1tbs` (opening brace on same line)
+
+```typescript
+// ❌ BAD
+const obj = {
+  foo: 1,
+}
+
+// ✅ GOOD
+const obj = {
+  foo: 1
+}
+```
+
+## Nuxt auto-imports
+
+Use Nuxt auto-imports: `defineEventHandler`, `useRoute`, `useAsyncData`, `computed`, `provide`, `inject` – no manual imports needed.
+
+## Server API
+
+- Handlers in `server/api/` – `defineEventHandler`
+- MCP tools in `server/mcp/tools/`
+- Routes in `server/routes/`

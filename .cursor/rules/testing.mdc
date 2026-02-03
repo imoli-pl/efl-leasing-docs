@@ -1,0 +1,26 @@
+---
+description: Vitest and Playwright test conventions
+globs: "test/**/*,tests/**/*"
+alwaysApply: false
+---
+
+# Testing
+
+## Vitest
+
+- Unit tests: `test/unit/`
+- Nuxt component tests: `test/nuxt/`
+- Use `@nuxt/test-utils` for Vue components
+
+## Playwright
+
+- E2E: `tests/*.spec.ts`
+- Config: `playwright.config.ts`
+
+## Running
+
+```bash
+pnpm test          # Vitest
+pnpm test:e2e      # Playwright
+pnpm test:coverage # Vitest with coverage
+```

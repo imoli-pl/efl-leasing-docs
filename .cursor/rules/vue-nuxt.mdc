@@ -1,0 +1,39 @@
+---
+description: Vue 3 and Nuxt UI conventions
+globs: "**/*.vue"
+alwaysApply: false
+---
+
+# Vue and Nuxt – Components
+
+## Syntax
+
+- Use `<script setup lang="ts">` with Composition API
+- Import types explicitly: `import type { ContentNavigationItem } from '@nuxt/content'`
+- Nuxt UI components: `UHeader`, `UButton`, `UPage`, `UContentNavigation`, etc.
+
+## Patterns
+
+- **provide/inject** for shared navigation: `provide('navigation', navigation)`
+- **useAsyncData** with unique key: `doc-nav-${sourceId}`, `doc-page-${sourceId}-${contentPath}`
+- **definePageMeta** with `validate` for dynamic routes
+- **useSeoMeta** and **defineOgImageComponent** for SEO
+
+## Example
+
+```vue
+<script setup lang="ts">
+import type { ContentNavigationItem } from '@nuxt/content'
+
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
+const { header } = useAppConfig()
+</script>
+
+<template>
+  <UHeader :to="header?.to || '/'">
+    <template #body>
+      <UContentNavigation highlight :navigation="navigation" />
+    </template>
+  </UHeader>
+</template>
+```

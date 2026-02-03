@@ -1,0 +1,23 @@
+---
+description: Content structure and Nuxt Content collections
+globs: "content/**/*"
+alwaysApply: false
+---
+
+# Content – Documentation
+
+## Structure
+
+- Numbered directories: `1.getting-started/`, `2.essentials/`
+- Index files: `1.index.md`
+- Navigation: `.navigation.yml` in directory (title, icon)
+
+## Collections (content.config.ts)
+
+- `landing` – homepage
+- `docs` – local documentation (`content/**`, prefix `/docs`)
+- `sdk_docs` – docs from external repo (GitHub)
+
+## Schemas
+
+Collections can have Zod schemas, e.g. `links` with `label`, `icon`, `to`, `target`.

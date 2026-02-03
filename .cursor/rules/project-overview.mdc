@@ -1,0 +1,31 @@
+---
+description: EFL Docs project context - tech stack and conventions
+alwaysApply: true
+---
+
+# EFL Docs - Project Overview
+
+## Tech stack
+
+- **Nuxt 4** with Vue 3
+- **Nuxt Content** – content management, collections
+- **Nuxt UI** – UI components (UHeader, UButton, UPage, etc.)
+- **TypeScript** – strict mode
+- **pnpm** – package manager
+- **Vitest** – unit tests
+- **Playwright** – E2E tests
+
+## Documentation sources
+
+Project supports multiple doc sources (e.g. `docs`, `sdk_docs`). Configuration in `app/config/docs-sources.ts`. Add new sources via `content.config.ts` (collections) and `docs-sources.ts` (mapping).
+
+## Conventions
+
+- **ESLint**: `commaDangle: 'never'`, `braceStyle: '1tbs'`
+- **EditorConfig**: 2 spaces, LF, trim trailing whitespace
+- **Commits**: conventional commits, messages in English
+
+## Code & Comments
+
+- **Language**: code, variable names, function names and comments in English only
+- **Comments**: describe **why**, not **what** – avoid comments that repeat obvious code
