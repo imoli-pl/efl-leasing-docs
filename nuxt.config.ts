@@ -45,7 +45,8 @@ export default defineNuxtConfig({
         '/'
       ],
       crawlLinks: true,
-      autoSubfolderIndex: false
+      autoSubfolderIndex: false,
+      failOnError: false
     }
   },
 
