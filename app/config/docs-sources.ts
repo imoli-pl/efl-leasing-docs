@@ -13,23 +13,50 @@ export interface DocSource {
 export const docSources: DocSource[] = [
   {
     id: 'docs',
-    label: 'Docs',
+    label: 'Documentation',
     prefix: '/docs',
     collection: 'docs',
     to: '/docs',
     icon: 'i-lucide-book-open',
-    indexPath: '/docs/getting-started'
+    indexPath: '/docs/about'
   },
   {
     id: 'sdk',
-    label: 'SDK',
+    label: 'PHP SDK',
     prefix: '/sdk',
     collection: 'sdk_docs',
     to: '/sdk',
     icon: 'i-lucide-package',
     editBaseUrl: 'https://github.com/imoli-pl/efl-leasing-sdk/edit/master/docs',
     indexPath: '/sdk'
-  }
+  },
+  // {
+  //   id: 'prestashop-module',
+  //   label: 'PrestaShop Module',
+  //   prefix: '/prestashop-module',
+  //   collection: 'prestashop_docs',
+  //   to: '/prestashop-module',
+  //   icon: 'i-simple-icons-prestashop',
+  //   indexPath: '/prestashop-module'
+  // },
+  // {
+  //   id: 'wordpress-plugin',
+  //   label: 'WordPress / WooCommerce Plugin',
+  //   prefix: '/wordpress-plugin',
+  //   collection: 'wordpress_docs',
+  //   to: '/wordpress-plugin',
+  //   icon: 'i-simple-icons-wordpress',
+  //   indexPath: '/wordpress-plugin'
+  // },
+  // {
+  //   id: 'shoper-app',
+  //   label: 'Shoper App',
+  //   prefix: '/shoper-app',
+  //   collection: 'shoper_docs',
+  //   to: '/shoper-app',
+  //   icon: 'i-lucide-shopping-bag',
+  //   indexPath: '/shoper-app'
+  // }
 ]
 
 export const prefixedDocSources = docSources

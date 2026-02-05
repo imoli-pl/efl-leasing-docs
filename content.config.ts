@@ -38,6 +38,54 @@ export default defineContentConfig({
           target: z.string().optional()
         })).optional()
       })
-    })
+    }),
+
+    // prestashop_docs: defineCollection({
+    //   type: 'page',
+    //   source: {
+    //     repository: {
+    //       url: 'https://github.com/imoli-pl/efl-leasing-prestashop-module',
+    //       branch: 'master',
+    //       auth: {
+    //         username: 'x-access-token',
+    //         token: process.env.GITHUB_TOKEN,
+    //       },
+    //     },
+    //     include: 'docs/**',
+    //     prefix: '/prestashop-module',
+    //   }
+    // }),
+
+    // wordpress_docs: defineCollection({
+    //   type: 'page',
+    //   source: {
+    //     repository: {
+    //       url: 'https://github.com/imoli-pl/efl-leasing-wordpress-plugin',
+    //       branch: 'master',
+    //       auth: {
+    //         username: 'x-access-token',
+    //         token: process.env.GITHUB_TOKEN,
+    //       },
+    //     },
+    //     include: 'docs/**',
+    //     prefix: '/wordpress-plugin',
+    //   }
+    // }),
+
+    // shopper_docs: defineCollection({
+    //   type: 'page',
+    //   source: {
+    //     repository: {
+    //       url: 'https://github.com/imoli-pl/efl-leasing-shoper-app',
+    //       branch: 'master',
+    //       auth: {
+    //         username: 'x-access-token',
+    //         token: process.env.GITHUB_TOKEN,
+    //       },
+    //     },
+    //     include: 'docs/**',
+    //     prefix: '/shoper-app',
+    //   }
+    // }),
   }
 })

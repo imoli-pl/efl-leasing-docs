@@ -33,6 +33,10 @@ export default defineAppConfig({
   },
   footer: {
     credits: `EFL Leasing • © ${new Date().getFullYear()}`,
+    author: {
+      name: 'Imoli',
+      url: 'https://imoli.dev'
+    },
     colorMode: false,
     links: [{
       'icon': 'i-simple-icons-github',
